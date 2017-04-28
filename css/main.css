@@ -309,7 +309,7 @@ textarea {
 
 .starry {
 position:absolute;
-  background:transparent url(http://i.imgur.com/z8eG5d5.png) repeat top center;
+  background:transparent url(../img/star.png) repeat top center;
   z-index:0;
   opacity:0.8;
   -moz-animation:stars 400s linear infinite;
@@ -333,7 +333,7 @@ position:absolute;
 } */
 
 .introSun{
-    background:url(http://i.imgur.com/p6MxpVD.png) no-repeat;
+    background:url(../img/sun.png) no-repeat;
     width:125px;
     height:125px;
     z-index:6;
@@ -343,7 +343,7 @@ position:absolute;
 }
 
 .introHand{
-    background:url(http://i.imgur.com/YWCwDKb.png) no-repeat;
+    background:url(../img/hand.png) no-repeat;
     position:absolute;
     width:338px;
     height:534px;
@@ -353,7 +353,7 @@ position:absolute;
 }
 
 .pinkbottom{
-    background:url(http://i.imgur.com/zEpltUY.png) repeat;
+    background:url(../img/pinkbottom.png) repeat;
     width:100%;
     bottom:0px;
     left:0px;
