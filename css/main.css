@@ -589,6 +589,11 @@ color:white;
     margin:0;
 }
 
+.writing{
+    display:flex;
+    justify-content: center;
+}
+
 .writing h2{
     text-shadow:none;
     font-size:18px;
@@ -714,6 +719,7 @@ p{
 }
 
 .holdRow{
+    align-self: center;
     margin:0 auto;
     position:relative;
     z-index:99999;
