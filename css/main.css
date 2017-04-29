@@ -512,21 +512,6 @@ color:white;
 
 /* Directory */
 
-.bignav{
-    background:url(http://i.imgur.com/SFxynMt.png);
-    position:relative;
-    z-index:101;
-    max-width: 799px;
-    height:300px;
-    margin:auto;
-    top:0;
-    left:0;
-}
-.bignav a{
-    font-size:48px;
-    font-family:"Playfair Display";
-    padding:0;
-}
 
 .subnav{
     font-size:12px;
@@ -799,4 +784,24 @@ p{
     align-self: center;
     margin:0;
     padding:0;
+}
+
+.cv{
+    display:inline-block;
+    width:50%;
+    color:white;
+    font-family:"Roboto Mono", monospace;
+    background:#ffd6d6;
+    color:#868ca7;
+    padding:.5em;
+    -webkit-transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    -ms-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
+}
+
+.cv:hover{
+    color:#ffd6d6;
+    background:#868ca7;
 }
