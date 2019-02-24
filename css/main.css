@@ -1,29 +1,10 @@
-<<<<<<< HEAD
-/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
 html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
 }
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
 
 ::-moz-selection {
     background: #b3d4fc;
@@ -35,10 +16,6 @@ html {
     text-shadow: none;
 }
 
-/*
- * A better looking default horizontal rule
- */
-
 hr {
     display: block;
     height: 1px;
@@ -47,12 +24,6 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
 
 audio,
 canvas,
@@ -63,27 +34,15 @@ video {
     vertical-align: middle;
 }
 
-/*
- * Remove default fieldset styles.
- */
-
 fieldset {
     border: 0;
     margin: 0;
     padding: 0;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-
 textarea {
     resize: vertical;
 }
-
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
 
 .browserupgrade {
     margin: 0.2em 0;
@@ -92,42 +51,181 @@ textarea {
     padding: 0.2em 0;
 }
 
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
+html {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Libre Baskerville', serif;
+    background: #F2D5D5;
+    color: #00076a;
+}
+
+.container{
+    position:absolute;
+    min-width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+
+.box{
+    display:block;
+    max-width:100%;
+    top:0;
+    left:0;
+    justify-content: center;
+}
+
+.within{
+    width:80%;
+    padding:.5em;
+    top:0;
+    left:0;
+    z-index:999;
+    bottom:0;
+    right:0;
+    position:relative;    
+}
+
+.boxCenter{
+    position:relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.leftfloat{
+    float:left;
+    width:30px;
+    font-size:11px;
+    text-align: center;
+}
+
+
+.rightfloat{
+    width:30px;
+    font-size:11px;
+    float:right;
+    text-align: center;
+}
+
+a{
+    color:#151275;
+    text-decoration: none;
+    -webkit-transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    -ms-transition: all .4s linear;
+    -o-transition: all .4s linear;
+    transition: all .4s linear;
+}
+
+/* CHIA INTRO */
+
+.chiaintro h1{
+    color:#151275;
+    margin:1em 0em 0em 0em;
+}
+
+.chiaintro a{text-decoration: none;}
+
+.chiaintro a:hover{
+    border-bottom:2px solid #151275;
+    text-decoration: none;
+}
+
+.chiaintro p a{
+    border-bottom:2px solid #151275;
+}
+
+.chiaintro a:hover{
+    color:red;
+    border-bottom:2px solid red;
+}
+
+.chiaintro p{
+    font-size:16px;
+    margin:0 1em 1em 1em;
+}
+
+.chiaintro h3{
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size:18px;
+    padding:1em;
+}
+
+.intromiddle{
+    text-align: center;
+    width:80%;
+    max-width:750px;
+    margin:0 auto;
+}
+
+.intromiddle p{
+    padding:1em;
+}
+
+.intromiddle h1{
+    color:#00076a;
+    font-family: 'Rubik Mono One', sans-serif;
+    letter-spacing:3px;
+    font-size:36px;
+}
+
+/* Stuff */
+
+.stuff{
+    max-width:600px;
+    text-align:center;
+    margin:0 auto;
+}
+
+.stuff a{
+    text-align: center;
+    display:block;
+}
+
+.stuff a strong{
+    font-size:22px;
+    font-family:"Rubik Mono One";
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: #151275;
+    margin:.5em;
+    color:#F2D5D5;
+}
 
 
 
 
 
 
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
 
+@media only screen and (min-width: 35em) {
 
+}
 
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
 
-
-
-
-
-
+}
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 
-/*
- * Hide visually and from screen readers
- */
-
 .hidden {
     display: none !important;
+    visibility: hidden;
 }
-
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
 
 .visuallyhidden {
     border: 0;
@@ -140,12 +238,6 @@ textarea {
     width: 1px;
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
     clip: auto;
@@ -156,68 +248,34 @@ textarea {
     width: auto;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
 .invisible {
     visibility: hidden;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    display: table;
 }
 
 .clearfix:after {
     clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+.clearfix {
+    *zoom: 1;
 }
 
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
+   Print styles
    ========================================================================== */
 
 @media print {
     *,
     *:before,
-    *:after,
-    *:first-letter,
-    *:first-line {
+    *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+        color: #000 !important;
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -235,11 +293,6 @@ textarea {
         content: " (" attr(title) ")";
     }
 
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
@@ -250,11 +303,6 @@ textarea {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
 
     thead {
         display: table-header-group;
@@ -280,1336 +328,4 @@ textarea {
     h3 {
         page-break-after: avoid;
     }
-}
-
-::selection {
-    background: #868ca7;
-    color:#fff;
-}
-::-moz-selection {
-    background: #868ca7;
-    color:#fff;
-}
-
-@keyframes stars {
-    from {background-position:0 0;}
-    to {background-position:0 -10000px;}
-}
-@-webkit-keyframes stars {
-    from {background-position:0 0;}
-    to {background-position:0 -10000px;}
-}
-@-moz-keyframes stars {
-    from {background-position:0 0;}
-    to {background-position:0 -10000px;}
-}
-@-ms-keyframes stars {
-    from {background-position: 0;}
-    to {background-position:0 -10000px;}
-}
-
-.starry {
-position:absolute;
-  background:transparent url(../img/star.png) repeat top center;
-  z-index:0;
-  opacity:0.8;
-  -moz-animation:stars 400s linear infinite;
-  -ms-animation:stars 400s linear infinite;
-  -o-animation:stars 400s linear infinite;
-  -webkit-animation:stars 400s linear infinite;
-  animation:stars 400s linear infinite;
-  width:100%;height:100%;
-    top:0px;left:0px;
-}
-
-/* .introMountains{
-    width:531px;
-    height:144px;
-    background:url(http://i.imgur.com/YsZvRjm.png);
-    z-index:5;
-    position:absolute;
-    margin:auto;
-    top:0;bottom:0;left:0;right:0;
-    
-} */
-
-.introSun{
-    background:url(../img/sun.png) no-repeat;
-    width:125px;
-    height:125px;
-    z-index:6;
-    position:absolute;
-    margin:auto;
-    top:100px;left:0;right:0;
-}
-
-.introHand{
-    background:url(../img/hand.png) no-repeat;
-    position:absolute;
-    width:338px;
-    height:534px;
-    z-index:5;
-    margin:auto;
-    bottom:30px;left:-20px;right:0;
-}
-
-.pinkbottom{
-    background:url(../img/pinkbottom.png) repeat;
-    width:100%;
-    bottom:0px;
-    left:0px;
-    margin-bottom:-110px;
-    height:300px;
-    z-index:100;
-    position:absolute;
-}
-
-*, *::before, *::after { box-sizing: inherit; }
-html { box-sizing: border-box; }
-
-a{
-    color:#fff;
-    text-decoration:none;
-}
-
-.sociallinks a{
-    font-size:22px;
-    color:#9092aa;
-    width:25px;
-    display:inline-block;
-}
-
-.container{
-    position:absolute;
-    max-width:100%;
-    min-width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
-}
-
-.box{
-    display:block;
-    width:100%;
-    top:0px;
-    left:0px;
-}
-
-.intro{
-    background: linear-gradient(to bottom, #868ca7 0%,#e3c4c5 100%);
-  display: flex;
-  justify-content: center;
-}
-
-.introBox{
-    width:60%;
-    padding:1em;
-    border:1em solid #868ca7;
-    z-index:10;
-    position:absolute;
-    margin:0 auto;
-    left: 0;
-    right: 0;
-    bottom:20%;
-}
-
-.introTitle{
-    margin-left:-100px;
-    width:600px;
-}
-
-.introName{
-    width:80%;
-    text-align: center;
-    align-self: center;
-    z-index:9999;
-    text-shadow:1px 2px 5px #d6bcc1, 1px 2px 0px #d6bcc1, -2px -1px 0px #868ca7;
-    margin-top:200px;
-}
-
-.introBox p{
-color:white;
-    font-size:18px;
-    font-weight:;
-    text-shadow:1px 2px 5px #d6bcc1, 1px 2px 0px #d6bcc1, -2px -1px 0px #868ca7;
-    margin:.5em;
-    font-family:"Roboto Mono", monospace;
-}
-
-.introName h1{
-    font-family: "Roboto Mono", monospace;
-    font-size:72px;
-    margin:0;
-    padding:0;
-    line-height:72px;
-}
-
-.introName h2{
-    font-family: "Roboto Mono", monospace;
-    font-size:18px;
-    margin:0;
-}
-
-.introTitle h1{
-    font-family:playfair display !important;
-    font-weight:800;
-    font-size:48px;
-    line-height:32px;
-    margin:0;
-}
-
-.introTitle h2{
-    text-transform: uppercase;
-    font-weight:800;
-    letter-spacing:3px;
-    font-size:18px;
-}
-
-.introBox p a{
-    background-image: linear-gradient(to bottom, #868ca7 0%,#5463a5 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color:#6873a6;
-    text-shadow:none;
-    text-decoration:none;
-    font-weight:900;
-    -webkit-transition: all .4s linear;
-    -moz-transition: all .4s linear;
-    -ms-transition: all .4s linear;
-    -o-transition: all .4s linear;
-    transition: all .4s linear;
-}
-
-
-.introBox p a:hover{
-   background-image: linear-gradient(to bottom, #ffbfc0 36%,#ffd6d6 100%);
-    color:#e49d9d;
-    text-shadow:0 0 5px #dea1a1;
-}
-
-.more{
-    font-size:24px;
-}
-
-
-.mainNavigation{
-    position:fixed;
-    bottom:0;
-    left:0;
-    z-index:99999;
-    padding:1em;
-}
-
-.mainNavigation a{
-    text-decoration:none;
-    letter-spacing:1px;
-    font-family:"Playfair Display", serif;
-    font-weight:900;
-    font-size:44px;
-    font-style: oblique;
-    text-shadow:none;
-    display:none;
-}
-
-/* Directory */
-
-
-.subnav{
-    font-size:12px;
-    display:block;
-    margin:-.5em 0 0 1em ;
-    padding:0;
-}
-
-/* Me section */
-
-.mePhoto{
-    background:url(http://i.imgur.com/RBspdNJ.png);
-    width:210px;
-    height:300px;
-    border:20px solid #8c8fa8;
-    float:left;
-    margin:1em .5em .5em 0;
-    z-index:9999;
-    position:relative;
-}
-
-.meWithin{
-    width:60%;
-    max-width:600px;
-    margin:0 auto;
-    top:0;
-    left:0;
-    z-index:999;
-    bottom:0;
-    right:0;
-    position:relative;
-}
-
-.meWithin h1, .holdRow h1{
-    color:#171717;
-    font-family:"Roboto mono", sans-serif;
-    text-transform: lowercase;
-}
-
-.meWithin p{
-    color:black;
-}
-
-
-.within{
-    width:80%;
-    margin:0 auto;
-    top:0;
-    left:0;
-    z-index:999;
-    bottom:0;
-    right:0;
-    position:relative;
-}
-
-.within p{
-    font-family: 'Roboto Mono', monospace;
-    font-weight:200;
-    font-size:14px;
-    margin:0;
-}
-
-.writing{
-    display:flex;
-    justify-content: center;
-}
-
-.writing h2{
-    text-shadow:none;
-    font-size:18px;
-    text-decoration:none;
-    color:black;
-    line-height:24px;
-    font-family:"roboto mono";
-    border:none;
-    font-weight:bold;
-}
-
-.writing h2{
-    border:none;
-    
-}
-
-.writing p{
-    font-family:"Nunito", sans-serif;
-    font-size:16px;
-    margin-bottom:1em;
-}
-
-/* AHAHHAA */
-
-.introduction h4{
-    font-family:"Roboto Mono", monospace;
-    text-align:center;
-    margin:0;
-}
-.introduction p{
-    font-size:16px;
-    font-family:"karla";
-    text-align: justify;
-    max-width:900px;
-}
-.introduction p a{
-    color:#6a5e60;
-    text-shadow:none;
-    text-decoration:none;
-    font-weight:900;
-    -webkit-transition: all .2s linear;
-    -moz-transition: all .2s linear;
-    -ms-transition: all .2s linear;
-    -o-transition: all .2s linear;
-    transition: all .2s linear;
-}
-
-
-.introduction p a:hover{
-    color:#6873a6;
-    text-shadow:0 0 1px #6a5e60;
-}
-
-.introduction{
-    margin:1em 0 1em 0;
-    padding:1em;
-    position:relative;
-    z-index:101;
-}
-
-/* haha */
-
-.smolnav{
-    font-family:"Roboto mono";
-}
-
-.smolnav a{
-    font-family:"nunito", sans-serif;
-    text-transform: uppercase;
-    letter-spacing:2.5px;
-    text-shadow:none;
-    text-decoration: none;
-    font-size:28px;
-    font-weight: 600;
-    text-align:center;
-    display:inline-block;
-    width:175px;
-    color:#9092aa;
-    -webkit-transition: all .4s linear;
-    -moz-transition: all .4s linear;
-    -ms-transition: all .4s linear;
-    -o-transition: all .4s linear;
-    transition: all .4s linear;
-}
-
-.smolnav a:hover{
-    color:#686b7d;
-}
-
-
-/* Ahhh */
-
-h1{
-    font-family:playfair display;
-    font-weight:900;
-    font-size:28px;
-    letter-spacing:1px;
-    margin:0;
-    color:white;
-}
-
-h2{
-    margin:0;
-    font-family:playfair display;
-    font-weight:100;
-    color:white;
-}
-
-p{
-    font-family:karla, sans-serif;
-    
-}
-
-.button{
-    display:block;
-    width:300px;
-    background:#868ca7;
-    padding:.2em;
-    text-align:center;
-    font-family:"Playfair Display";
-    font-weight:900;
-    font-size:28px;
-}
-
-.holdRow{
-    align-self: center;
-    margin:0 auto;
-    position:relative;
-    z-index:99999;
-    padding:1em;
-}
-
-
-/* Popup Menu */
-
-.sidenav a{
-    font-family:"Nunito", sans-serif;
-    text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:32px;
-    text-decoration: none;
-    display:inline-block;
-    text-shadow:none;
-    text-align:center;
-    margin:.3em;
-    font-weight: 900;
-    color:white;
-    -webkit-transition: all .4s linear;
-    -moz-transition: all .4s linear;
-    -ms-transition: all .4s linear;
-    -o-transition: all .4s linear;
-    transition: all .4s linear;
-}
-
-.sidenav a:hover{
-    color:#e3c4c5;
-}
-
-.sidenav{
-  align-self: center;
-  padding: 2rem;
-    
-}
-
-#holdnav{
-  display: flex;
-  justify-content: center;
-    width:100%;
-    height:100%;
-}
-
-#open{
-    position:fixed;
-    z-index:9998;
-    color:white;
-    font-size:3em;
-    top:0;right:0;
-    padding:.3em .5em 0 0;
-}
-
-#bg{
-    position:fixed;
-    height: 100%;
-    width:100%;
-    padding: 0;
-    margin: 0 auto;
-    top:0;
-    z-index:99999;
-    background:#6c6e82;
-    display:none;
-}
-
-#ok{
-    position:relative;
-    margin:0 auto;
-    display:none;
-    height:100%;
-}
-
-/* Centering */
-
-.center{
-    align-self: center;
-    margin:0;
-    padding:0;
-}
-
-.cv{
-    display:inline-block;
-    width:50%;
-    color:white;
-    font-family:"Roboto Mono", monospace;
-    background:#ffd6d6;
-    color:#868ca7;
-    padding:.5em;
-    -webkit-transition: all .4s linear;
-    -moz-transition: all .4s linear;
-    -ms-transition: all .4s linear;
-    -o-transition: all .4s linear;
-    transition: all .4s linear;
-}
-
-.cv:hover{
-    color:#ffd6d6;
-    background:#868ca7;
-=======
-/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after,
-    *:first-letter,
-    *:first-line {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
-
-::selection {
-    background: #868ca7;
-    color:#fff;
-}
-::-moz-selection {
-    background: #868ca7;
-    color:#fff;
-}
-
-@keyframes stars {
-    from {background-position:0 0;}
-    to {background-position:0 -10000px;}
-}
-@-webkit-keyframes stars {
-    from {background-position:0 0;}
-    to {background-position:0 -10000px;}
-}
-@-moz-keyframes stars {
-    from {background-position:0 0;}
-    to {background-position:0 -10000px;}
-}
-@-ms-keyframes stars {
-    from {background-position: 0;}
-    to {background-position:0 -10000px;}
-}
-
-.starry {
-position:absolute;
-  background:transparent url(../img/star.png) repeat top center;
-  z-index:0;
-  opacity:0.8;
-  -moz-animation:stars 400s linear infinite;
-  -ms-animation:stars 400s linear infinite;
-  -o-animation:stars 400s linear infinite;
-  -webkit-animation:stars 400s linear infinite;
-  animation:stars 400s linear infinite;
-  width:100%;height:100%;
-    top:0px;left:0px;
-}
-
-/* .introMountains{
-    width:531px;
-    height:144px;
-    background:url(http://i.imgur.com/YsZvRjm.png);
-    z-index:5;
-    position:absolute;
-    margin:auto;
-    top:0;bottom:0;left:0;right:0;
-    
-} */
-
-.introSun{
-    background:url(../img/sun.png) no-repeat;
-    width:125px;
-    height:125px;
-    z-index:6;
-    position:absolute;
-    margin:auto;
-    top:100px;left:0;right:0;
-}
-
-.introHand{
-    background:url(../img/hand.png) no-repeat;
-    position:absolute;
-    width:338px;
-    height:534px;
-    z-index:5;
-    margin:auto;
-    bottom:30px;left:-20px;right:0;
-}
-
-.pinkbottom{
-    background:url(../img/pinkbottom.png) repeat;
-    width:100%;
-    bottom:0px;
-    left:0px;
-    margin-bottom:-110px;
-    height:300px;
-    z-index:100;
-    position:absolute;
-}
-
-*, *::before, *::after { box-sizing: inherit; }
-html { box-sizing: border-box; }
-
-a{
-    color:#fff;
-    text-decoration:none;
-}
-
-.sociallinks a{
-    font-size:22px;
-    color:#9092aa;
-    width:25px;
-    display:inline-block;
-}
-
-.container{
-    position:absolute;
-    max-width:100%;
-    min-width:100%;
-    height:100%;
-    top:0px;
-    left:0px;
-}
-
-.box{
-    display:block;
-    width:100%;
-    top:0px;
-    left:0px;
-}
-
-.intro{
-    background: linear-gradient(to bottom, #868ca7 0%,#e3c4c5 100%);
-  display: flex;
-  justify-content: center;
-}
-
-.introBox{
-    width:60%;
-    padding:1em;
-    border:1em solid #868ca7;
-    z-index:10;
-    position:absolute;
-    margin:0 auto;
-    left: 0;
-    right: 0;
-    bottom:20%;
-}
-
-.introTitle{
-    margin-left:-100px;
-    width:600px;
-}
-
-.introName{
-    width:80%;
-    text-align: center;
-    align-self: center;
-    z-index:9999;
-    text-shadow:1px 2px 5px #d6bcc1, 1px 2px 0px #d6bcc1, -2px -1px 0px #868ca7;
-    margin-top:200px;
-}
-
-.introBox p{
-color:white;
-    font-size:18px;
-    font-weight:;
-    text-shadow:1px 2px 5px #d6bcc1, 1px 2px 0px #d6bcc1, -2px -1px 0px #868ca7;
-    margin:.5em;
-    font-family:"Roboto Mono", monospace;
-}
-
-.introName h1{
-    font-family: "Roboto Mono", monospace;
-    font-size:72px;
-    margin:0;
-    padding:0;
-    line-height:72px;
-}
-
-.introName h2{
-    font-family: "Roboto Mono", monospace;
-    font-size:18px;
-    margin:0;
-}
-
-.introTitle h1{
-    font-family:playfair display !important;
-    font-weight:800;
-    font-size:48px;
-    line-height:32px;
-    margin:0;
-}
-
-.introTitle h2{
-    text-transform: uppercase;
-    font-weight:800;
-    letter-spacing:3px;
-    font-size:18px;
-}
-
-.introBox p a{
-    background-image: linear-gradient(to bottom, #868ca7 0%,#5463a5 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color:#6873a6;
-    text-shadow:none;
-    text-decoration:none;
-    font-weight:900;
-    -webkit-transition: all .4s linear;
-    -moz-transition: all .4s linear;
-    -ms-transition: all .4s linear;
-    -o-transition: all .4s linear;
-    transition: all .4s linear;
-}
-
-
-.introBox p a:hover{
-   background-image: linear-gradient(to bottom, #ffbfc0 36%,#ffd6d6 100%);
-    color:#e49d9d;
-    text-shadow:0 0 5px #dea1a1;
-}
-
-.more{
-    font-size:24px;
-}
-
-
-.mainNavigation{
-    position:fixed;
-    bottom:0;
-    left:0;
-    z-index:99999;
-    padding:1em;
-}
-
-.mainNavigation a{
-    text-decoration:none;
-    letter-spacing:1px;
-    font-family:"Playfair Display", serif;
-    font-weight:900;
-    font-size:44px;
-    font-style: oblique;
-    text-shadow:none;
-    display:none;
-}
-
-/* Directory */
-
-
-.subnav{
-    font-size:12px;
-    display:block;
-    margin:-.5em 0 0 1em ;
-    padding:0;
-}
-
-/* Me section */
-
-.mePhoto{
-    background:url(http://i.imgur.com/RBspdNJ.png);
-    width:210px;
-    height:300px;
-    border:20px solid #8c8fa8;
-    float:left;
-    margin:1em .5em .5em 0;
-    z-index:9999;
-    position:relative;
-}
-
-.meWithin{
-    width:60%;
-    max-width:600px;
-    margin:0 auto;
-    top:0;
-    left:0;
-    z-index:999;
-    bottom:0;
-    right:0;
-    position:relative;
-}
-
-.meWithin h1, .holdRow h1{
-    color:#171717;
-    font-family:"Roboto mono", sans-serif;
-    text-transform: lowercase;
-}
-
-.meWithin p{
-    color:black;
-}
-
-
-.within{
-    width:80%;
-    margin:0 auto;
-    top:0;
-    left:0;
-    z-index:999;
-    bottom:0;
-    right:0;
-    position:relative;
-}
-
-.within p{
-    font-family: 'Roboto Mono', monospace;
-    font-weight:200;
-    font-size:14px;
-    margin:0;
-}
-
-.writing{
-    display:flex;
-    justify-content: center;
-}
-
-.writing h2{
-    text-shadow:none;
-    font-size:18px;
-    text-decoration:none;
-    color:black;
-    line-height:24px;
-    font-family:"roboto mono";
-    border:none;
-    font-weight:bold;
-}
-
-.writing h2{
-    border:none;
-    
-}
-
-.writing p{
-    font-family:"Nunito", sans-serif;
-    font-size:16px;
-    margin-bottom:1em;
-}
-
-/* AHAHHAA */
-
-.introduction h4{
-    font-family:"Roboto Mono", monospace;
-    text-align:center;
-    margin:0;
-}
-.introduction p{
-    font-size:16px;
-    font-family:"karla";
-    text-align: justify;
-    max-width:900px;
-}
-.introduction p a{
-    color:#6a5e60;
-    text-shadow:none;
-    text-decoration:none;
-    font-weight:900;
-    -webkit-transition: all .2s linear;
-    -moz-transition: all .2s linear;
-    -ms-transition: all .2s linear;
-    -o-transition: all .2s linear;
-    transition: all .2s linear;
-}
-
-
-.introduction p a:hover{
-    color:#6873a6;
-    text-shadow:0 0 1px #6a5e60;
-}
-
-.introduction{
-    margin:1em 0 1em 0;
-    padding:1em;
-    position:relative;
-    z-index:101;
-}
-
-/* haha */
-
-.smolnav{
-    font-family:"Roboto mono";
-}
-
-.smolnav a{
-    font-family:"nunito", sans-serif;
-    text-transform: uppercase;
-    letter-spacing:2.5px;
-    text-shadow:none;
-    text-decoration: none;
-    font-size:28px;
-    font-weight: 600;
-    text-align:center;
-    display:inline-block;
-    width:175px;
-    color:#9092aa;
-    -webkit-transition: all .4s linear;
-    -moz-transition: all .4s linear;
-    -ms-transition: all .4s linear;
-    -o-transition: all .4s linear;
-    transition: all .4s linear;
-}
-
-.smolnav a:hover{
-    color:#686b7d;
-}
-
-
-/* Ahhh */
-
-h1{
-    font-family:playfair display;
-    font-weight:900;
-    font-size:28px;
-    letter-spacing:1px;
-    margin:0;
-    color:white;
-}
-
-h2{
-    margin:0;
-    font-family:playfair display;
-    font-weight:100;
-    color:white;
-}
-
-p{
-    font-family:karla, sans-serif;
-    
-}
-
-.button{
-    display:block;
-    width:300px;
-    background:#868ca7;
-    padding:.2em;
-    text-align:center;
-    font-family:"Playfair Display";
-    font-weight:900;
-    font-size:28px;
-}
-
-.holdRow{
-    align-self: center;
-    margin:0 auto;
-    position:relative;
-    z-index:99999;
-    padding:1em;
-}
-
-
-/* Popup Menu */
-
-.sidenav a{
-    font-family:"Nunito", sans-serif;
-    text-transform:uppercase;
-    letter-spacing:3px;
-    font-size:32px;
-    text-decoration: none;
-    display:inline-block;
-    text-shadow:none;
-    text-align:center;
-    margin:.3em;
-    font-weight: 900;
-    color:white;
-    -webkit-transition: all .4s linear;
-    -moz-transition: all .4s linear;
-    -ms-transition: all .4s linear;
-    -o-transition: all .4s linear;
-    transition: all .4s linear;
-}
-
-.sidenav a:hover{
-    color:#e3c4c5;
-}
-
-.sidenav{
-  align-self: center;
-  padding: 2rem;
-    
-}
-
-#holdnav{
-  display: flex;
-  justify-content: center;
-    width:100%;
-    height:100%;
-}
-
-#open{
-    position:fixed;
-    z-index:9998;
-    color:white;
-    font-size:3em;
-    top:0;right:0;
-    padding:.3em .5em 0 0;
-}
-
-#bg{
-    position:fixed;
-    height: 100%;
-    width:100%;
-    padding: 0;
-    margin: 0 auto;
-    top:0;
-    z-index:99999;
-    background:#6c6e82;
-    display:none;
-}
-
-#ok{
-    position:relative;
-    margin:0 auto;
-    display:none;
-    height:100%;
-}
-
-/* Centering */
-
-.center{
-    align-self: center;
-    margin:0;
-    padding:0;
-}
-
-.cv{
-    display:inline-block;
-    width:50%;
-    color:white;
-    font-family:"Roboto Mono", monospace;
-    background:#ffd6d6;
-    color:#868ca7;
-    padding:.5em;
-    -webkit-transition: all .4s linear;
-    -moz-transition: all .4s linear;
-    -ms-transition: all .4s linear;
-    -o-transition: all .4s linear;
-    transition: all .4s linear;
-}
-
-.cv:hover{
-    color:#ffd6d6;
-    background:#868ca7;
 }
