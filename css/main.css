@@ -4,6 +4,10 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 ::-moz-selection {
@@ -62,8 +66,11 @@ html {
 
 body {
     font-family: 'Libre Baskerville', serif;
-    background: #e5b5b5;
+    background: #f9f8f7;
     color: #2c2e30;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -91,6 +98,8 @@ body {
     position: relative;
     margin: auto;
     min-width: 400px;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 
