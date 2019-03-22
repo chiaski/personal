@@ -150,6 +150,9 @@ a:hover {
     line-height: 22px;
 }
 
+.pic-me:hover {
+    opacity: 0.8;
+}
 
 /* OOH */
 .hidden-container {
