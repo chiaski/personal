@@ -76,11 +76,21 @@ body {
 
 .box {
     display: block;
+    justify-content: center;
     box-sizing: border-box;
-    max-width: 100%;
+    width: 100%;
     top: 0;
     left: 0;
-    justify-content: center;
+}
+
+.box img {
+    max-width: 95%;
+}
+
+.box-inner {
+    position: relative;
+    margin: auto;
+    min-width: 400px;
 }
 
 .within {
