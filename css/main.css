@@ -93,37 +93,6 @@ body {
     min-width: 400px;
 }
 
-.within {
-    width: 80%;
-    padding: .5em;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    bottom: 0;
-    right: 0;
-    position: relative;
-}
-
-.boxCenter {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.leftfloat {
-    float: left;
-    width: 30px;
-    font-size: 11px;
-    text-align: center;
-}
-
-
-.rightfloat {
-    width: 30px;
-    font-size: 11px;
-    float: right;
-    text-align: center;
-}
 
 a {
     color: #151275;
@@ -134,85 +103,6 @@ a {
     -o-transition: all .4s linear;
     transition: all .4s linear;
 }
-
-/* CHIA INTRO */
-
-.chiaintro h1 {
-    color: #151275;
-    margin: 1em 0em 0em 0em;
-}
-
-.chiaintro a {
-    text-decoration: none;
-}
-
-.chiaintro a:hover {
-    border-bottom: 2px solid #151275;
-    text-decoration: none;
-}
-
-.chiaintro p a {
-    border-bottom: 2px solid #151275;
-}
-
-.chiaintro a:hover {
-    color: red;
-    border-bottom: 2px solid red;
-}
-
-.chiaintro p {
-    font-size: 16px;
-    margin: 0 1em 1em 1em;
-}
-
-.chiaintro h3 {
-    font-family: 'Rubik Mono One', sans-serif;
-    font-size: 18px;
-    padding: 1em;
-}
-
-.intromiddle {
-    text-align: center;
-    width: 80%;
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-.intromiddle p {
-    padding: 1em;
-}
-
-.intromiddle h1 {
-    color: #00076a;
-    font-family: 'Rubik Mono One', sans-serif;
-    letter-spacing: 3px;
-    font-size: 36px;
-}
-
-/* Stuff */
-
-.stuff {
-    max-width: 600px;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.stuff a {
-    text-align: center;
-    display: block;
-}
-
-.stuff a strong {
-    font-size: 22px;
-    font-family: "Rubik Mono One";
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #151275;
-    margin: .5em;
-    color: #F2D5D5;
-}
-
-
-
 
 
 
