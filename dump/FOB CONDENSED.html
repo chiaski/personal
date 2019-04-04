@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js" type="text/javascript"></script>
+  <style type="text/css">
+   /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+h1{font-size:28px;font-weight:bold;}
+
+h1.lyricsbox{text-align:center;font-size:16px;}
+#lyricsbox{border:1px solid #000;padding:1em;}
+
+li button{background-color:white;margin:1px;padding:1px;border:1px solid;}
+.lyrics{display:none;}
+  </style>
+  </head>
+  <body>
+
+<script src="http://listjs.com/no-cdn/list.js"></script>
+<center><h1>Main Search</h1><form>
+  <input class="main-search" placeholder="Search" /></center><br />
+<h1 class="lyricsbox">Song Lyrics</h1>
+<div id="lyricsbox">
+
+</div>
+<div id="songs">
+<h1>Fall Out Boy</h1>
+ <input class="search" placeholder="Search" />
+  <button class="sort" data-sort="name">
+    Sort by name
+  </button>
+
+  <ul class="list">
+    <li>
+      <button class="showlyric">The (After) Life of the Party</button>
+      <p>1212</p>
+    </li>
+</div>
+
+</form>
+
+<br /><br />
+
+
+<button onclick="$('.futct').toggle();">Hide Cork Tree</button>
+<button onclick="$('.ioh').toggle();">Hide Infinity on High</button>
+<button onclick="$('19').toggle();">Hide 19</button>
+<div class="testingpota">RAWWWR</div>
+<script>
+$('#FUTCT').click(function() {
+  $('div').html('Aardvark');
+});
+</script>
+<script>
+
+var $sevenminutes = "I'm sleeping my way out of this one\n With anyone who will lie down\n I'll be stuck fixated on one star\n When the world is crashing down\n";
+var $sophomoreslump = "Are we growing up or just going down? \nIt's just a matter of time until we're all found out \nTake our tears and put them on ice\n Cause I swear I'd burn this city down to show you the light";
+var $golden = "How cruel is the golden rule? \nWhen the lives we lived are only golden-plated \nAnd I knew that the lights of the city were too heavy for me \nThough I carried karats for everyone to see"
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.2.0/list.min.js"></script>
+<script>
+var options = {
+  valueNames: [ 'name', 'born', { class: ['album'] },'album', 'lyrics'],
+  item: '<li class="futct"><button class="showlyric name"></button><p class="born"></p><p class="lyrics"></p></li>'
+};
+
+var futctvalues = [{
+    name: 'Sophomore Slump or Comeback of the Year',
+    born: 19,
+    album: 'futct',
+    lyrics: $sophomoreslump
+  },
+  {
+    name: 'Seven Minutes in Heaven',
+    born: 1985,
+    album: 'futct',
+    lyrics: $sevenminutes
+  },
+  {
+    name: 'XO',
+    born: 1986,
+    album: 'fad'
+}];
+
+var userList = new List('songs', options, values);
+
+// userList.add({
+//  name: "Gustaf Lindqvist",
+//  born: 1983777777
+// }); 
+
+$('.main-search').on("keyup",function(){
+            userList.search($(".main-search").val());
+            userList2.search($(".main-search").val());
+        }); 
+</script>
+ <div id="container">
+
+
+
+
+</div>
+
+
+  </body>
+</html>

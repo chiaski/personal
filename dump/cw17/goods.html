@@ -1,0 +1,71 @@
+<html>
+    
+    <head>
+       <meta charset="utf-8">
+        <title>Landas: Goods</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:700,700i" rel="stylesheet">
+        
+        
+        
+        <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div ng-app="goods" ng-controller="myCtrl">
+        
+        <div class="navigation">
+        <center><div class="navigationLogo" style="display:inline;text-align:center;"><img src="img/logosmol.png" /><br /></div>
+            <a>{{disasterName}}:</a>
+            <a href="">Overview</a>
+            <a href="">Cash</a>
+            <a href="">Goods</a>
+            <a href="">Time</a>
+        </center>
+        </div>
+            
+        <div class="container">
+            
+            
+        <div class="box" style="min-height:100%;background:#ffd9c8;">
+            
+            <div class="within">
+            sdagasdgasdg
+            
+            </div>
+            
+            
+        </div>
+        
+        
+        </div>
+        
+        <div id="footer">
+        <em>KeithyMcKeithyface</em>
+        </div>
+        <script>
+            var disasterNamevar;
+            if(document.cookie == "All" || document.cookie == "Typhoon Kaell" || document.cookie == "Marawi") {
+                var disasterNamevar = document.cookie;
+            } else{
+                disasterNamevar = "All";
+            }
+            alert(document.cookie);
+            var disasters = ["Marawi", "Typhoon Kaell"];
+            var app = angular.module('goods', []);
+            app.controller('myCtrl', function($scope) {
+                $scope.disasterName = disasterNamevar;
+            });
+        </script>
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        -->
+  
+        <!--<script src="js/main.js"></script>-->
+            
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+    <head>
+       <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Landas</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:700,700i" rel="stylesheet">
+        
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+  <body>
+      <div ng-app="landingPage" ng-controller="myCtrl">
+        
+        <div class="box" style="min-height:100%;font-family:'Apercu Mono';background-image:url('img/bgcolor.png');">
+            
+            <div class="landingintro intro">
+            <img class="logo" style="height:300px;" src="img/logo.png" />
+                
+            
+            <h1 ng-bind="wayways"> asfasf {{ ways[1] }} or {{ heck }}</h1>
+                <input type="text" ng-model="wayways">
+            </div>
+            
+         
+                
+            </div>
+            
+        
+        
+        </div>
+
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        -->
+  
+        <!--<script src="js/main.js"></script>-->
+            <script>
+            var app = angular.module("landingPage"), []);
+            app.controller("myCtrl", function($scope) {
+                $scope.ways = ["Goods", "Cash", "time"];
+                $scope.heck = "Heckie";
+            });
+            </script>
+  </body>
+</html>

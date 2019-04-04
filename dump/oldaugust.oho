@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Chiaski</title>
+<meta name="description=" content="Chiaski is a personal website; an idiosyncratic compound of a creative named Chia Amisola. A portfolio, blog, project compilation, thought dump, experimentation lab, and more.">
+<meta name="keywords" content="Chiaski,Chia Amisola,Chiara Amisola,Chiara,Amisola,Portfolio,Project,Blog,Blogger">
+<meta name="author" content="Chia Amisola">
+	<link rel="shortcut icon" href="/favicon.png">
+    <script src="http://chiaski.com/jquery.js"></script>
+    <script src="http://chiaski.com/src/typed.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js" type="text/javascript"></script>
+  </script>
+<link href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+   body{background-color:#f6e0dd;font-family: 'Karla', sans-serif;}
+#bg{width:100%;height:100%;z-index:-9999;background-color:white;position:fixed;opacity:0.5}
+
+    body {
+      animation: colorchange 50s infinite; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange 50s infinite; /* Chrome and Safari */
+    }
+
+    @keyframes colorchange
+    {
+      0%   {background: #f4dfe2;}
+      10%   {background: #f5dccc;}
+      20%   {background: #f5f3cc;}
+      30%   {background: #c3e7c4;}
+      40%   {background: #c3e7e7;}
+      50%   {background: #c3d6e7;}
+      60%   {background: #bdbdee;}
+      70%   {background: #e0d6ed;}
+      80%   {background: #ecd6f2;}
+      90%   {background: #f4cee7;}
+      100%   {background: #f4dfe2;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: #f4dfe2;}
+      10%   {background: #f5dccc;}
+      20%   {background: #f5f3cc;}
+      30%   {background: #c3e7c4;}
+      40%   {background: #c3e7e7;}
+      50%   {background: #c3d6e7;}
+      60%   {background: #bdbdee;}
+      70%   {background: #e0d6ed;}
+      80%   {background: #ecd6f2;}
+      90%   {background: #f4cee7;}
+      100%   {background: #f4dfe2;}
+    }
+
+strong{font-weight:bold;}
+em{font-style:italic;}
+#container{position:absolute;top:0px;left:0px;width:100%;height:100%;display:flexbox;}
+.box{display:inline-block;width:100%;top:0px;left:0px;}
+
+.intro{text-align:center;margin:1em;top: 50%;transform: translateY(-50%);position:relative;}
+.intro a{color:black;}
+.introbuttons a{text-decoration:none;display:inline-block;margin:2px;padding:1px;width:8px;height:8px;background-color:#6e6e6e;border-radius:100%;}
+
+.links{text-align:center;top: 50%;transform: translateY(-50%);position:relative;}
+.links a{display:inline-block;text-decoration:none;color:#3e3e3d;background-color: rgba(255, 255, 255, 1);color:#383838;padding:1em;width:20%;font-weight:bold;text-transform:uppercase;letter-spacing:2px;-webkit-transition: all 0.3s linear;-moz-transition: all 0.3s linear;-ms-transition: all 0.3s linear;-o-transition: all 0.3s linear;transition: all 0.3s linear;}
+.links a:hover{letter-spacing:5px;}
+
+.featurebox{position:relative;left:50%;width:700px;margin-left:-350px;}
+.featureboxpls{display:inline-block;float:left;width:200px;margin:1em;}
+.feature{display:block;width:200px;height:200px;}
+.feature img{display:block;width:200px;height:200px;}
+.featureboxpls a{text-decoration:none;font-weight:bold;color:#323232;letter-spacing:-1px;}
+
+.linkboxcontainer{margin-left:-364px;position:relative;left:50%;width:728px;}
+.linkboxlinks{width:300px;background-color:white;padding:1em;display:inline-block;float:left;margin:1em;}
+.linkboxlinks a{text-decoration:none;width:40%;padding:9px;margin:5px;display:inline-block;color:#2a2a2a;border-bottom:1px solid #ccc;}
+.linkboxlinks a:hover{font-weight:bold;}
+h3{text-align:center;font-size:18px;letter-spacing:2px;text-shadow:#ccc 0px 1px;}
+
+
+.work{text-align:center;margin:1em;top: 50%;transform: translateY(-50%);position:relative;}
+.worklinkscontainer{position:relative;left:50%;width:800px;margin-left:-390px;}
+.worklinks{width:750px;background-color:white;padding:1em;}
+.worklinks a{text-decoration:none;width:45%;padding:9px;margin:7px;display:inline-block;color:#2a2a2a;border-bottom:0.1px solid #ccc;text-align:center;}
+
+
+.wholebox{height:150px;width:100%;background-size:cover;position:relative;}
+.wholeboxtext{background-color:white;display:inline-block;width:30%;left:50%;position:relative;margin-left:-15%;padding:1em;height:20px;line-height:20px;top: 50%;transform: translateY(-50%);color:black;text-align:center;font-style:italic;}
+
+.footercontainer{position:relative;background-color:white;padding:1em;}
+.footer{text-align:center;}
+.footer a{color:black;text-decoration:none;}
+  </style>
+
+  </head>
+  <body>
+
+<html>
+<div id="bg"></div>
+  <div id="container">
+
+
+<div class="box" style="height:100%;">
+<div class="intro">
+<p><strong>chia, sixteen.</strong><br />
+i am in love with languages &mdash;<br />be it code or prose; classical music,<br />and so much more.<br /><br />"I probably just want to leave a<br /> trace of myself behind in this world." <br /><em>5 Centimeters per Second</em></p><br /><a href="/press.php">press</a>
+<br /><br />
+<a href="http://league.god.jp/" target="_blank" alt="Tumblr" title="Tumblr"><i class="fa fa-tumblr"></i></a> 
+<a href="http://hellopoetry.com/chiaski" target="_blank" alt="Hello Poetry" title="Hello Poetry"><i class="fa fa-book"></i></a> 
+<a href="https://www.instagram.com/chiaski" target="_blank" alt="Instagram" title="Instagram"><i class="fa fa-instagram"></i></a> 
+<a href="https://twitter.com/amisoIa" target="_blank" alt="Twitter" title="Twitter"><i class="fa fa-twitter"></i></a> 
+<a href="https://www.youtube.com/channel/UCE7iJPXZu4mLKgTYKa1CK5A" target="_blank" alt="YouTube" title="Youtube"><i class="fa fa-youtube"></i></a> 
+</div>
+</div>
+
+
+<div class="box" style="height:400px;">
+<div class="links">
+<a href="http://blog.chiaski.com" title="blog" alt="blog">read my thoughts.</a>
+</div>
+</div>
+
+<div class="box" style="height:260px;background-color: rgba(255, 255, 255, 1);">
+<div class="featurebox">
+<center>
+<div class="featureboxpls">
+<a href="http://blog.chiaski.com/2016/kanken-philpost-experience/"><div class="feature" style="background-color:#fae3e3;"></div><br />
+<i class="fa fa-shopping-cart" style="font-size:13px;"></i> ; Kanken/Philpost</a>
+</div>
+
+
+<div class="featureboxpls">
+<a href="http://blog.chiaski.com/2016/solstice/"><div class="feature" style="background-color:#fff9ca;"></div><br />
+<i class="fa fa-pencil" style="font-size:13px;"></i> ; Solstice</a>
+</div>
+
+
+<div class="featureboxpls">
+<a href="http://blog.chiaski.com/2016/bete-noire/"><div class="feature" style="background-color:#d5e6f5;"></div><br />
+<i class="fa fa-pencil" style="font-size:13px;"></i> ; Bete noire</a>
+</div>
+</center>
+</div>
+</div>
+
+<div class="box" style="height:230px;">
+<div class="linkboxcontainer">
+
+<div class="linkboxlinks">
+<h3>CATEGORIES</h3>
+<a href="http://blog.chiaski.com/anime/" title="anime">Anime</a> 
+<a href="http://blog.chiaski.com/explore/" title="explore">Explore</a> 
+<a href="http://blog.chiaski.com/journal/" title="journal">Journal</a> 
+<a href="http://blog.chiaski.com/music/" title="music">Music</a> 
+<a href="http://blog.chiaski.com/personal/" title="personal">Personal</a> 
+<a href="http://blog.chiaski.com/review/" title="review">Reviews</a> 
+<a href="http://blog.chiaski.com/thoughts/" title="thoughts">Thoughts</a> 
+<a href="http://blog.chiaski.com/writing/" title="writing">Writing</a> 
+</div>
+
+
+<div class="linkboxlinks">
+<img src="http://i.imgur.com/RAyVL7n.png" align="right" style="margin-left:10px;" />
+<p style="font-size:16px;text-align:justify;"><strong>THE BLOG</strong> &mdash; Chiaski is a collection of thoughts and dreams.
+Born on January, 2016. <br /><br />It highlights everything. My thoughts, the things I surround myself with, in-depth analytics - all from a girl who enjoys many things and excels in none of them in particular.</p>
+</div>
+</div>
+</div>
+
+
+<div class="box" style="height:100%;">
+<div class="work">
+<p><strong>chia, a creative.</strong><br />
+weaving things myself and<br />being able to create; film, canvases,<br />photography, words, prose, games, innovations,<br />and all &mdash; here is a collection of my work, forever in progress.</p>
+<br /><br />
+</div>
+</div>
+
+
+
+<div class="box" style="height:100px;">
+<div class="links">
+<a href="#" title="in progress" alt="in progress">in progress.</a>
+</div>
+</div>
+
+
+
+<div class="box" style="height:230px;">
+<div class="linkboxcontainer">
+
+
+<div class="linkboxlinks">
+<img src="http://i.imgur.com/3Rrrsjl.png" align="left" style="margin-right:10px;" />
+<p style="font-size:16px;text-align:justify;"><strong>THE CRAFT</strong> &mdash; I can't live without creation; and so it has been a part of me since the very beginning. My work is scattered all throughout the internet.<br /><br />
+Here are some bits and pieces of myself; pretty messy and uncollated - but still real, and raw. My portfolio is a w.i.p.</p>
+</div>
+
+
+<div class="linkboxlinks">
+<h3>PROJECTS</h3>
+<a href="/dump/FOB.html" title="im emo">Fall Out Boy Lyrics Sorter <i class="fa fa-music" style="font-size:13px;"></i></a> 
+<a href="http://kumi.ga" target="_blank">Kumi <i class="fa fa-book" style="font-size:13px;"></i></a> 
+<a href="http://www.philome.la/amisoIa/the-day-after/play" target="_blank">The Day After <i class="fa fa-book" style="font-size:13px;"></i></a> 
+</div>
+</div>
+</div>
+
+
+
+<div class="box" style="height:300px;">
+<a href="http://www.philome.la/amisoIa/the-day-after/play"><div class="wholebox" style=""><div class="wholeboxtext" style="background-color:#fff;">the day after [short game]</div></div></a>
+<a href="#"><div class="wholebox" style=""><div class="wholeboxtext" style="background-color:#fff;">sashimi-san [wip]</div></div></a>
+</div>
+
+
+<div class="box" style="height:600px;">
+<div class="worklinkscontainer">
+<div class="worklinks">
+<a href="/dump">/dump</a>
+<a href="http://chiaski.com/games/generic.php">/genericdatingsim.swf</a>
+<a href="http://chiaski.com/dump/towa">/towa.txt</a>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div class="box" style="height:100px;">
+<div class="footercontainer">
+<div class="footer">
+<script language="JavaScript">var fhsh = document.createElement('script');var fhs_id_h = "3107643";
+fhsh.src = "//s1.freehostedscripts.net/ocount.php?site="+fhs_id_h+"&name=visits&a=1";
+document.head.appendChild(fhsh);document.write("<span id='h_"+fhs_id_h+"'></span>");
+</script> | <script language="JavaScript">var fhs = document.createElement('script');var fhs_id = "5322296";
+var ref = (''+document.referrer+'');var pn =  window.location;var w_h = window.screen.width + " x " + window.screen.height;
+fhs.src = "//s1.freehostedscripts.net/ocounter.php?site="+fhs_id+"&e1=Online&e2=Online&r="+ref+"&wh="+w_h+"&a=1&pn="+pn+"";
+document.head.appendChild(fhs);document.write("<span id='o_"+fhs_id+"'></span>");
+</script>
+
+<br />
+<a href="http://league.god.jp/" target="_blank" alt="Tumblr" title="Tumblr"><i class="fa fa-tumblr"></i></a> 
+<a href="http://hellopoetry.com/chiaski" target="_blank" alt="Hello Poetry" title="Hello Poetry"><i class="fa fa-book"></i></a> 
+<a href="https://www.instagram.com/chiaski" target="_blank" alt="Instagram" title="Instagram"><i class="fa fa-instagram"></i></a> 
+<a href="https://twitter.com/amisoIa" target="_blank" alt="Twitter" title="Twitter"><i class="fa fa-twitter"></i></a> 
+<a href="https://www.youtube.com/channel/UCE7iJPXZu4mLKgTYKa1CK5A" target="_blank" alt="YouTube" title="Youtube"><i class="fa fa-youtube"></i></a> <br /><br />
+<strong><em>Chiaski</em></strong> is copyright of Chia Amisola.<br />
+Born: 2016
+</div>
+</div>
+</div>
+
+</div>
+  </body>
+</html>

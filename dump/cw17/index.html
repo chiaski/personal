@@ -1,0 +1,101 @@
+<html>
+    
+    <head>
+       <meta charset="utf-8">
+        <title>Landas</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:700,700i" rel="stylesheet">
+        
+        
+        
+        <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div ng-app="landingPage" ng-controller="myCtrl">
+        
+        <div class="container">
+        <div class="box" style="min-height:100%;background:#ffd9c8;
+    background-image:url(img/landingbg.gif);background-size:cover;background-position:center;background-attachment: fixed;background-repeat: no-repeat;">
+            
+            <div class="landingintro intro" style="background:#ffd9c8;">
+                <h2 style="text-align:center;"><i class="fa fa-map-marker"></i></h2>
+            <p style="text-align:center;">Begin your service journey.</p>
+            <span><h1> I live in<br /><input type="text" ng-model="userLoc" ng-change="locate(userLoc)" name="userLoc"></h1></span> 
+            
+         
+            <h1>I want to offer<br />
+            <select ng-change="go(currentPage)" ng-model="currentPage">
+            <option ng-repeat="x in ways">{{x}}</option>    
+            </select></h1>
+                
+                
+            <center><input type="button" class="fade" ng-show="!!userLoc && (currentPage=='Goods' || currentPage=='Time' || currentPage=='Cash')" value="Go" ng-click="setCookie()"></center>
+            </div>
+            
+                
+            
+            <div class="disasters">
+                <h5>...or select a disaster</h5>
+            <select value="All" ng-change="change(disaster)" ng-model="disaster">
+                <option class="landingDisaster" selected="selected">All</option>
+                <option class="landingDisasters" ng-repeat="x in disasters">{{ x }}</option>
+            </select>
+            </div>
+            
+            </div>
+            
+            
+        </div>
+        
+        
+        </div>
+        
+        <div id="footer">
+        <em>KeithyMcKeithyface</em>
+        </div>
+        <script>
+            
+            var disasters = ["Marawi", "Typhoon Kaell"];
+            var app = angular.module('landingPage', []);
+
+            
+            app.controller('myCtrl', function($scope) {
+                $scope.ways = ["Goods", "Cash", "Time"];
+                $scope.currentPage = 'landing';
+                $scope.go = function(currentPage){
+                    $scope.selectPage = currentPage;
+                    console.log($scope.selectPage)
+                }
+                $scope.change = function(disaster){
+                    $scope.selectDisaster = disaster;
+                    console.log($scope.selectDisaster)
+                }
+                $scope.locate = function(userLoc){
+                    $scope.selectLocation = userLoc;
+                    console.log($scope.selectLocation)
+                }
+                $scope.disasters = disasters;
+                $scope.setCookie = function(){
+                    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                    document.cookie = $scope.selectDisaster;
+                    alert("Cookie is set to: " + $scope.selectDisaster);
+                    var pageredirect = $scope.selectPage + '.html';
+                    window.location.href = pageredirect.toLowerCase();
+                }
+            });
+            
+            
+        </script>
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        -->
+  
+        <!--<script src="js/main.js"></script>-->
+            
+    </body>
+</html>

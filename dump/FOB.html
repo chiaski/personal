@@ -1,0 +1,326 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>(Summer) Song Sorter</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js" type="text/javascript"></script>
+  <style type="text/css">
+   /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+h1{font-size:28px;font-weight:bold;}
+@import 'https://fonts.googleapis.com/css?family=Karla:400,400i,700';
+
+h1.lyricsbox{text-align:center;font-size:16px;}
+#lyricsbox{border:1px solid #000;padding:1em;white-space: pre-wrap;height:250px;width:400px;font-family: 'Karla', sans-serif;overflow-y:scroll;overflow-x:hidden;}
+
+li{font-family:karla;padding:3px;font-size:18px;}
+.raw{display:none;}
+.lyrics{display:none;}
+#container{padding:1em;}
+body{font-family:karla;}
+.main-search{border-radius:5px;width:400px;height:30px;font-size:26px;font-family:karla;text-align:center;border:1px dotted;}
+button.toggbutt{margin:1em;font-family:karla;font-size:14px;border:1px solid;background-color:#fff;padding:3px;}
+.togghighlight{padding:3px;margin:5px;background-color:yellow;display:inline-block;width:100px;height:30px;font-size:22px;line-height:30px;}
+.highlight { background-color: yellow }
+  </style>
+<script src="http://chiaski.com/dump/songs.js"></script>
+<script src="http://chiaski.com/dump/highlight.js" type="text/javascript"></script>
+<script src="http://chiaski.com/dump/fuzzysearch.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+<script src="http://listjs.com/no-cdn/list.js"></script>
+<div id="container"><br />
+
+<p style="text-align:center;">This tool lets you search for lyrics from Fall Out Boy songs.<br />Use the main search bar to search for lines (ex: lot lizard scales cool your nightlife moods)<br />and see the list at the bottom get narrowed down (ex: Disloyal Order of Water Buffaloes)<br />You may click on the name of the song to view the full lyrics as well.<br />*click on a song, search for a line (in either order) then click highlight to see the words that you've searched for<br /><br /></p>
+
+<center><h1>Main Search</h1>
+<button onclick="$('.futct').toggle();" class="toggbutt">Toggle Cork Tree</button>
+<button onclick="$('.ioh').toggle();" class="toggbutt">Toggle Infinity on High</button>
+<button onclick="$('.fad').toggle();" class="toggbutt">Toggle Folie a Deux</button>
+<br />
+  <input class="main-search" placeholder="Search" /><br />
+<div class="togghighlight">Highlight </div>*
+<script>
+
+ $(".main-search").keyup(function(){
+searchterm = ($(this).val());
+$('#lyricsbox').unhighlight();
+$('#lyricsbox').highlight(searchterm);
+});
+
+// $( '.togghighlight' ).click(function() {
+// $('#lyricsbox').unhighlight();
+// $('#lyricsbox').highlight(searchterm);
+// });
+</script>
+</center>
+<h1 class="lyricsbox">Song Lyrics</h1>
+<center><div id="lyricsbox">
+
+</div></center>
+<div id="FUTCT">
+<h1>Cork Tree</h1>
+  <input class="search" placeholder="Search" />
+  <button class="sort" data-sort="name">
+    Sort by name
+  </button>
+
+  <button class="sort" data-sort="born">
+    Sort by birth
+  </button>
+
+
+  <ul class="list"></ul>
+
+</div>
+<div id="IOH">
+<h1>Infinity on High</h1>
+  <input class="search" placeholder="Search" />
+  <button class="sort" data-sort="name">
+    Sort by name
+  </button>
+
+  <button class="sort" data-sort="born">
+    Sort by birth
+  </button>
+  <ul class="list"></ul>
+
+</div>
+<div id="FAD">
+<h1>Folie a Deux</h1>
+  <input class="search" placeholder="Search" />
+  <button class="sort" data-sort="order">
+    Sort by order
+  </button>
+  <ul class="list"></ul>
+
+</div>
+
+<br /><br />
+
+</div>
+
+<script>
+    $("#container").on('click','li',function (){
+// testpls = $(this).find('.raw').text();
+//newtestpls = testpls.replace(/(^|[\s\S])([A-Z])/g, "$1\n$2");
+//$( "#lyricsbox" ).text(newtestpls)
+     $( "#lyricsbox" ).text($(this).find('.lyrics').text())
+$('#lyricsbox').unhighlight();
+$('#lyricsbox').highlight(searchterm);
+    });
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.2.0/list.min.js"></script>
+<script>
+var futctoptions = {
+  valueNames: [ 'name', 'raw', 'album', 'lyrics', 'order'],
+  item: '<li class="futct"><p class="showlyric name"></p><p class="lyrics"></p></li>'
+};
+
+var futctvalues = [{
+    name: 'Sophomore Slump or Comeback of the Year',
+    order: 8,
+    raw: $sophomoreslumpraw,
+    album: 'futct',
+    lyrics: $sophomoreslump
+  },
+  {
+    name: 'Seven Minutes in Heaven',
+    order: 7,
+    raw: $sevenminutesraw,
+    album: 'futct',
+    lyrics: $sevenminutes
+  }];
+
+var iohoptions = {
+  valueNames: [ 'name', 'raw', 'album', 'lyrics', 'order'],
+  item: '<li class="ioh"><p class="showlyric name"></p><p class="lyrics"></p></li>',
+plugins: [ListFuzzySearch()]
+};
+
+var iohvalues = [{
+name: 'Golden',
+    order: 6,
+raw: $goldenraw,
+album: 'ioh',
+lyrics: $golden
+},
+{
+name: 'Hum Hallelujah',
+raw: $humhallelujahraw,
+    order: 5,
+album: 'ioh',
+lyrics: $humhallelujah
+}];
+
+
+var fadoptions = {
+  valueNames: [ 'name', 'raw', 'album', 'lyrics', 'order'],
+  item: '<li class="fad"><p class="showlyric name"></p><p class="lyrics"></p></li>',
+plugins: [ListFuzzySearch()]
+};
+
+var fadvalues = [{
+name: 'Disloyal Order of Water Buffaloes',
+    order: 1,
+raw: $disloyalraw,
+album: 'fad',
+lyrics: $disloyal
+},
+{
+name: 'I Dont Care',
+    order: 2,
+raw: $idcraw,
+album: 'fad',
+lyrics: $idc
+},
+{
+name: 'Shes My Winona',
+    order: 3,
+raw: $shesmywinonaraw,
+album: 'fad',
+lyrics: $shesmywinona
+},
+{
+name: 'Americas Suitehearts',
+    order: 4,
+raw: $americasraw,
+album: 'fad',
+lyrics: $americas
+},
+{
+name: 'Headfirst Slide into Cooperstown on a Bad Bet',
+    order: 5,
+raw: $headfirstraw,
+album: 'fad',
+lyrics: $headfirst
+},
+{
+name: 'The (Shipped) Gold Standard',
+    order: 6,
+raw: $shippedgoldraw,
+album: 'fad',
+lyrics: $shippedgold
+},
+{
+name: '(Coffees for Closers)',
+    order: 7,
+raw: $coffeesraw,
+album: 'fad',
+lyrics: $coffees
+},
+{
+name: 'What a Catch, Donnie',
+    order: 8,
+raw: $whatacatchraw,
+album: 'fad',
+lyrics: $whatacatch
+},
+{
+name: '27',
+order: 9,
+raw: $27raw,
+album: 'fad',
+lyrics: $27
+},
+{
+name: 'Tiffany Blews',
+    order: 10,
+raw: $tiffanyblewsraw,
+album: 'fad',
+lyrics: $tiffanyblews
+},
+{
+name: 'WAMS',
+    order: 11,
+raw: $wamsraw,
+album: 'fad',
+lyrics: $wams
+},
+{
+name: '20 Dollar Nosebleed',
+    order: 12,
+raw: $20dollarraw,
+album: 'fad',
+lyrics: $20dollar
+},
+{
+name: 'West Coast Smoker',
+    order: 13,
+raw: $westcoastraw,
+album: 'fad',
+lyrics: $westcoast
+}];
+
+var userList = new List('FUTCT', futctoptions, futctvalues);
+var userList2 = new List('IOH', iohoptions, iohvalues);
+var userList3 = new List('FAD', fadoptions, fadvalues);
+
+// userList.add({
+//  name: "Gustaf Lindqvist",
+//  born: 1983777777
+// }); 
+
+$('.main-search').on("keyup",function(){
+            userList.search($(".main-search").val());
+            userList2.search($(".main-search").val());
+            userList3.search($(".main-search").val());
+        }); 
+</script>
+
+</div>
+
+
+  </body>
+</html>
