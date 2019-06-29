@@ -59,6 +59,7 @@ html {
 body {
     font-family: 'Libre Baskerville', serif;
     background: #1619d9;
+    background-image: url(../img/bg.jpg);
     color: #f2f2f7;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
