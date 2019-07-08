@@ -96,23 +96,6 @@ body {
 }
 
 
-a {
-    color: #a9e7ea;
-    text-decoration: none;
-    -webkit-transition: all .4s linear;
-    -moz-transition: all .4s linear;
-    -ms-transition: all .4s linear;
-    -o-transition: all .4s linear;
-    transition: all .4s linear;
-    text-shadow: 0 3px 20px #c6c5b8;
-}
-
-a:hover {
-    color: #2b3072;
-    text-shadow: 0 1px 20px #c6c5b8;
-}
-
-
 /* THE GIRL */
 
 .front-links {
