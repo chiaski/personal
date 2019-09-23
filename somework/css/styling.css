@@ -1,0 +1,71 @@
+/*.bottom-rainbow {
+    position: absolute;
+    background: #FFFFFF;
+    padding: 1.2em 0 1.5em 0;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(124deg, #ea69a5, #c368ea, #7079f9, #6fd7db, #675be5, #e55bc0);
+    background-size: 1800% 1800%;
+    -webkit-animation: rainbow 20s ease infinite;
+    -z-animation: rainbow 20s ease infinite;
+    -o-animation: rainbow 20s ease infinite;
+    animation: rainbow 20s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-moz-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-o-keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+} */
