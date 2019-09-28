@@ -1,0 +1,10 @@
+$theme-font:    verdana, sans-serif;
+$ass: #e63838;
+
+body {
+  font: $theme-font;
+  background-color: $ass;
+  h1, h2 {
+      color: #fff;
+  }
+}
