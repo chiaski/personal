@@ -1,30 +1,14 @@
-'use strict';
+const path = require('path');
 
-const e = React.createElement;
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  }
+};
 
-class LikeButton extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            liked: false
-        };
-    }
-
-    render() {
-        if (this.state.liked) {
-            return 'You liked this.';
-        }
-
-        return e(
-            'button', {
-                onClick: () => this.setState({
-                    liked: true
-                })
-            },
-            'Like'
-        );
-    }
-}
-
-const domContainer = document.querySelector("#content-landing");
-ReactDOM.render(e(LikeButton), domContainer);
+ReactDOM.render(
+  <h1>Hello World!</h1>,
+  document.getElementById('root')
+);
