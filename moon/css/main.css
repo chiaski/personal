@@ -1,14 +1,14 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
-html {}
-
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #361fe3;
+    color: #b3d4fc;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #361fe3;
+    color: #b3d4fc;
     text-shadow: none;
 }
 
@@ -58,8 +58,8 @@ html {
 
 body {
     font-family: 'Libre Baskerville', serif;
-    background: #25292f;
-    color: #f989d8;
+    background: #eff6f7;
+    color: #392d36;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
